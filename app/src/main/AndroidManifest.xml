@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.example.projecttaxi">
+
     <uses-permission android:name="android.permission.INTERNET" />
     <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
     <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
@@ -12,13 +13,18 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.ProjectTaxi">
+        <activity android:name=".WaitTimer"></activity>
+        <activity android:name=".SettingsForm" />
+        <activity android:name=".History" />
+
         <meta-data
             android:name="com.google.android.geo.API_KEY"
             android:value="AIzaSyD8Bj4e541rl6NAJUYrzDYrXLl9RHzUWT0" />
-
-        <meta-data android:name="com.google.android.gms.version"
+        <meta-data
+            android:name="com.google.android.gms.version"
             android:value="@integer/google_play_services_version" />
-        <activity android:name=".GPSForm"></activity>
+
+        <activity android:name=".GPSForm" />
         <activity android:name=".LoginForm" />
         <activity android:name=".MainActivity">
             <intent-filter>
@@ -26,6 +32,7 @@
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
+
             <meta-data
                 android:name="com.google.android.geo.API_KEY"
                 android:value="Your Api Key" />
