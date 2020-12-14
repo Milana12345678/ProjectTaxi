@@ -17,7 +17,7 @@ public class MainActivity extends AppCompatActivity {
     }
     private void startTimer()
     {
-        new CountDownTimer(4000,1000)
+        new CountDownTimer(2000,1000)
         {
             @Override
             public void onTick(long l) {
