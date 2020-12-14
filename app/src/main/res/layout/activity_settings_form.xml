@@ -33,7 +33,7 @@
         android:textColor="@color/white"
         android:textSize="30sp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/imageView6"
+        app:layout_constraintStart_toEndOf="@+id/menuHistory"
         app:layout_constraintTop_toTopOf="parent" />
 
     <ImageView

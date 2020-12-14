@@ -35,11 +35,11 @@
         android:textSize="30sp"
         app:layout_constraintBottom_toTopOf="@+id/cardView2"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/imageView6"
+        app:layout_constraintStart_toEndOf="@+id/menuHistory"
         app:layout_constraintTop_toTopOf="parent" />
 
     <ImageView
-        android:id="@+id/imageView6"
+        android:id="@+id/menuHistory"
         android:layout_width="0dp"
         android:layout_height="45dp"
         android:layout_marginStart="16dp"
