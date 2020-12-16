@@ -18,6 +18,14 @@ public class LoginForm extends AppCompatActivity {
         setContentView(R.layout.activity_login_form);
         TextView txtLogin = (TextView)findViewById(R.id.txtLogin);
         TextView txtPassword = (TextView)findViewById(R.id.txtPassword);
+        TextView txtCreate = (TextView)findViewById(R.id.txtCreate);
+        txtCreate.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(LoginForm.this,RegistrationForm      .class);
+                startActivity(intent);
+            }
+        });
         Button btnSign = (Button) findViewById(R.id.btnLogin);
         btnSign.setOnClickListener(new View.OnClickListener() {
             @Override
