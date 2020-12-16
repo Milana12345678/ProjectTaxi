@@ -22,14 +22,12 @@ public class LoginForm extends AppCompatActivity {
         btnSign.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(LoginForm.this,GPSForm.class);
-                startActivity(intent);
              String Password, Login;
              Login =  txtLogin.getText().toString();
              Password =txtPassword.getText().toString();
              String OriginLogin = "serk";
              String OriginPassword = "123";
-                /*if(Login.equals(OriginLogin))
+                if(Login.equals(OriginLogin))
                 {
                     if(Password.equals(OriginPassword))
                     {
@@ -39,14 +37,14 @@ public class LoginForm extends AppCompatActivity {
                     else showToastPassword();
                 }
                 else showToastLogin();
-                    */
+
             }
 
 
         });
     }
     public void showToastLogin() {
-        //создаём и отображаем текстовое уведомление
+        
         Toast toast = Toast.makeText(getApplicationContext(),
                 "Неверный логин!",
                 Toast.LENGTH_SHORT);
@@ -54,7 +52,7 @@ public class LoginForm extends AppCompatActivity {
         toast.show();
     }
     public void showToastPassword() {
-        //создаём и отображаем текстовое уведомление
+
         Toast toast = Toast.makeText(getApplicationContext(),
                 "Неверный пароль!",
                 Toast.LENGTH_SHORT);

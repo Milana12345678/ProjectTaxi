@@ -13,7 +13,8 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.ProjectTaxi">
-        <activity android:name=".WaitTimer"></activity>
+        <activity android:name=".RegistrationForm"></activity>
+        <activity android:name=".WaitTimer" />
         <activity android:name=".SettingsForm" />
         <activity android:name=".History" />
 

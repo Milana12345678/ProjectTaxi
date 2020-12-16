@@ -27,6 +27,7 @@ import android.webkit.WebView;
 import android.widget.Button;
 import android.widget.FrameLayout;
 import android.widget.ImageView;
+import android.widget.TableLayout;
 
 import com.google.android.gms.maps.CameraUpdate;
 import com.google.android.gms.maps.CameraUpdateFactory;
@@ -38,6 +39,7 @@ import com.google.android.gms.maps.model.CircleOptions;
 import com.google.android.gms.maps.model.LatLng;
 import com.google.android.gms.maps.model.Marker;
 import com.google.android.gms.maps.model.MarkerOptions;
+import com.google.android.gms.maps.model.PointOfInterest;
 import com.google.android.gms.maps.model.PolylineOptions;
 
 import java.sql.SQLData;
@@ -51,6 +53,10 @@ public class GPSForm extends AppCompatActivity implements OnMapReadyCallback {
     CardView cardHistory;
     CardView cardSettings;
     CardView cardProfile;
+    TableLayout CarBlock;
+    int touch =1;
+    Button btnBook;
+
 
     static final int MY_PERMISSIONS_REQUEST_READ_CONTACTS = 23;
     @Override
@@ -58,10 +64,18 @@ public class GPSForm extends AppCompatActivity implements OnMapReadyCallback {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_g_p_s_form);
         checkPermission();
-
+        CarBlock = (TableLayout)findViewById(R.id.CarBlock);
         Map = (View)findViewById(R.id.map);
         Lay = (View) findViewById(R.id.firstLayout);
         Lay.setVisibility(View.GONE);
+        btnBook = (Button)findViewById(R.id.btnBook);
+        btnBook.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(GPSForm.this,WaitTimer.class);
+                startActivity(intent);
+            }
+        });
         cardProfile = (CardView)findViewById(R.id.cardForProfile);
         cardProfile.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -150,6 +164,13 @@ public class GPSForm extends AppCompatActivity implements OnMapReadyCallback {
                 mMap.addMarker(new MarkerOptions().position(new LatLng(54.984106, 82.890640)).icon(
                         BitmapDescriptorFactory.fromResource(R.drawable.carmargenta)));
                 DrawLine();
+                picMenu.setVisibility(View.GONE);
+                if(touch==1)
+                {
+                    DurationCarBlock();
+                    touch++;
+                }
+
                 return false;
             }
         });
@@ -221,6 +242,13 @@ public class GPSForm extends AppCompatActivity implements OnMapReadyCallback {
         as.playTogether(x,y);
         as.setDuration(1000);
         as.start();
+    }
+    private void DurationCarBlock()
+    {
+        float translationY = CarBlock.getTranslationY();
+        ObjectAnimator y= ObjectAnimator.ofFloat(CarBlock, "translationY", translationY, translationY-1350);
+        y.setDuration(1000);
+        y.start();
     }
 
 

@@ -132,6 +132,10 @@
         android:name="com.google.android.gms.maps.SupportMapFragment"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
         tools:context=".GPSForm" />
 
     <ImageView
@@ -148,20 +152,44 @@
         android:id="@+id/CarBlock"
         android:layout_width="match_parent"
         android:layout_height="400dp"
-        android:layout_marginTop="370dp"
+        android:layout_marginTop="1200dp"
         android:background="@drawable/border"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent">
 
-        <TableRow>
+        <TableRow android:layout_marginTop="40dp">
 
             <ImageView
                 android:id="@+id/imageView"
+                android:layout_width="370dp"
+                android:layout_height="230dp"
+                android:layout_marginLeft="20dp"
+                android:scaleType="fitXY"
+                app:srcCompat="@drawable/lox" />
+        </TableRow>
+
+        <TableRow
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingTop="35dp"
+
+
+            >
+
+            <Button
+                android:id="@+id/btnBook"
                 android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                app:srcCompat="@drawable/cars" />
+                android:layout_height="55dp"
+                android:layout_span="5"
+                android:width="120dp"
+                android:background="@drawable/btn"
+                android:paddingLeft="20dp"
+                android:text="Book"
+                android:translationX="10dp"
+                android:visibility="visible"
+                app:backgroundTint="#FFB900" />
         </TableRow>
     </TableLayout>
 
