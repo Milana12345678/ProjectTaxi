@@ -13,7 +13,7 @@ public class History extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_history);
-        ImageView menu = (ImageView)findViewById(R.id.picMenu);
+        ImageView menu = (ImageView)findViewById(R.id.menuHistory);
         menu.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {

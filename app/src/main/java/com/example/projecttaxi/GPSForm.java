@@ -22,6 +22,8 @@ import android.text.Layout;
 import android.view.FrameMetrics;
 import android.view.View;
 import android.view.animation.TranslateAnimation;
+import android.webkit.WebChromeClient;
+import android.webkit.WebView;
 import android.widget.Button;
 import android.widget.FrameLayout;
 import android.widget.ImageView;
@@ -56,6 +58,7 @@ public class GPSForm extends AppCompatActivity implements OnMapReadyCallback {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_g_p_s_form);
         checkPermission();
+
         Map = (View)findViewById(R.id.map);
         Lay = (View) findViewById(R.id.firstLayout);
         Lay.setVisibility(View.GONE);
